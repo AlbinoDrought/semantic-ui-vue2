@@ -3,8 +3,18 @@
   "version": "2.4.2",
   "description": "Semantic UI Integration for Vue 2",
   "main": "index.js",
+  "hsnext:main": "index.es.js",
   "scripts": {
+    "build": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2016"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,5 +30,18 @@
   "bugs": {
     "url": "https://github.com/almino/semantic-ui-vue2/issues"
   },
-  "homepage": "https://github.com/almino/semantic-ui-vue2#readme"
+  "homepage": "https://github.com/almino/semantic-ui-vue2#readme",
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2016": "^6.24.1",
+    "del": "^3.0.0",
+    "rollup": "^0.47.5",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-vue": "^2.4.1",
+    "vue": "^2.4.2"
+  }
 }
