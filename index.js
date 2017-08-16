@@ -11,7 +11,7 @@ import Checkbox from './src/modules/Checkbox.vue'
 import Dropdown from './src/modules/Dropdown.vue'
 import Modal from './src/modules/Modal.vue'
 
-import Mixin from './src/mixins/'
+import Mixin from './src/mixins/index'
 import Collections from './src/mixins/collections.js'
 import Modules from './src/mixins/modules.js'
 
