@@ -4,13 +4,20 @@
   "description": "Semantic UI Integration for Vue 2",
   "main": "index.js",
   "hsnext:main": "index.es.js",
+  "private": true,
   "scripts": {
     "build": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
     "presets": [
-      "es2016"
+      "es2016",
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ]
     ],
     "plugins": [
       "transform-runtime"
@@ -37,6 +44,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
     "del": "^3.0.0",
     "rollup": "^0.47.5",
