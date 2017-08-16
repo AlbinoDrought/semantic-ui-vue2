@@ -1,6 +1,6 @@
 <template>
     <div
-        v-bind:class="[
+        :class="[
             {visible},
             'ui',
             {active},
@@ -11,9 +11,9 @@
         ]" v-on:click.self="toggle"
         v-on:keydown.up="search ? false : selectPrevious()"
         v-on:keydown.down="search ? false : selectNext()"
-        v-bind:tabindex="search ? '' : 0"
+        :tabindex="search ? '' : 0"
         v-click-outside="hide">
-        <input type="hidden" v-bind:name="name" v-if="selection">
+        <input type="hidden" :name="name" v-if="selection">
         <i class="dropdown icon" v-on:click="toggle"></i>
         <input type="search" class="search" autocomplete="off" tabindex="0"
             ref="search"
@@ -23,7 +23,7 @@
             v-on:keydown.up="selectPrevious"
             v-on:keydown.down="selectNext"
             v-if="search">
-        <div v-bind:class="[
+        <div :class="[
             { 'default' : typeof selected.value == 'undefined' },
             'text',
             { filtered },
@@ -31,25 +31,25 @@
             <transition
                 v-on:before-enter="beforeEnter"
                 v-on:after-enter="afterEnter"
-                v-bind:enter-active-class="enterActiveClass"
-                v-bind:leave-active-class="leaveActiveClass"
+                :enter-active-class="enterActiveClass"
+                :leave-active-class="leaveActiveClass"
                 v-on:before-leave="beforeLeave"
                 v-on:after-leave="afterLeave">
                 <div
                     ref="menu"
-                    v-bind:class="[{visible}, 'transition', 'menu']"
+                    :class="[{visible}, 'transition', 'menu']"
                     tabindex="-1"
                     v-show="isVisible">
                     <slot>
                         <template v-show="$items.length > 0">
                             <div
                                 ref="items"
-                                v-bind:class="[
+                                :class="[
                                     { 'disabled' : item.disabled },
                                     { 'active selected' : selected == item && !disabled },
                                     'item'
                                 ]"
-                                v-bind:tabindex="(index + 2) * -1"
+                                :tabindex="(index + 2) * -1"
                                 v-on:focus="setSelected(item)"
                                 v-for="(item, index) in $items">
                                 <slot name="item" :item="item">

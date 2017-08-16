@@ -1,39 +1,39 @@
 <template lang="html">
-    <div v-bind:class="['ui', getSlotsClasses(), getIconClasses(), getSizeClasses(),
+    <div :class="['ui', getSlotsClasses(), getIconClasses(), getSizeClasses(),
         { 'fluid' : fluid }, { 'inverted' : inverted },
         { 'transparent' : transparent }, { 'disabled' : disabled }, 'input',
         { 'loading' : loading }, { 'error' : error }]">
         <slot name="left-label"></slot>
         <slot name="left-action"></slot>
         <input
-            v-bind:id="id"
-            v-bind:accept="accept"
-            v-bind:alt="alt"
-            v-bind:autocomplete="autocomplete"
-            v-bind:autofocus="autofocus"
-            v-bind:checked="checked"
-            v-bind:dirname="dirname"
-            v-bind:disabled="disabled"
-            v-bind:form="form"
-            v-bind:formaction="formaction"
-            v-bind:formenctype="formenctype"
-            v-bind:formmethod="formmethod"
-            v-bind:formnovalidate="formnovalidate"
-            v-bind:formtarget="formtarget"
-            v-bind:list="list"
-            v-bind:max="max"
-            v-bind:maxlength="maxlength"
-            v-bind:min="min"
-            v-bind:multiple="multiple"
-            v-bind:name="name"
-            v-bind:pattern="pattern"
-            v-bind:placeholder="placeholder"
-            v-bind:readonly="readonly"
-            v-bind:required="required"
-            v-bind:src="src"
-            v-bind:step="step"
-            v-bind:type="type"
-            v-bind:value="value"
+            :id="id"
+            :accept="accept"
+            :alt="alt"
+            :autocomplete="autocomplete"
+            :autofocus="autofocus"
+            :checked="checked"
+            :dirname="dirname"
+            :disabled="disabled"
+            :form="form"
+            :formaction="formaction"
+            :formenctype="formenctype"
+            :formmethod="formmethod"
+            :formnovalidate="formnovalidate"
+            :formtarget="formtarget"
+            :list="list"
+            :max="max"
+            :maxlength="maxlength"
+            :min="min"
+            :multiple="multiple"
+            :name="name"
+            :pattern="pattern"
+            :placeholder="placeholder"
+            :readonly="readonly"
+            :required="required"
+            :src="src"
+            :step="step"
+            :type="type"
+            :value="value"
             v-on:keydown="emitKeyDown"
             v-on:keypress="emitKeyPress"
             v-on:keyup="emitKeyUp"
@@ -62,7 +62,7 @@
             ref="input" />
         <slot name="right-label"></slot>
         <slot name="right-action"></slot>
-        <i v-bind:class="[dIcon.value, 'icon']" v-if="dIcon.value"></i>
+        <i :class="[dIcon.value, 'icon']" v-if="dIcon.value"></i>
     </div>
 </template>
 

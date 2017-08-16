@@ -1,5 +1,5 @@
 <template lang="html">
-    <form v-bind:class="['ui', getEqualWidthClasses(), getSizeClasses(),
+    <form :class="['ui', getEqualWidthClasses(), getSizeClasses(),
         { 'loading' : loading }, { 'inverted' : inverted }, 'form',
         { 'success' : success }, { 'error' : error }, { 'warning' : warning }]">
         <slot></slot>

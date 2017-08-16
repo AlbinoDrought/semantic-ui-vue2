@@ -1,5 +1,5 @@
 <template lang="html">
-    <div v-bind:class="['ui', getSizeClasses(), 'label']">
+    <div :class="['ui', getSizeClasses(), 'label']">
         <slot></slot>
     </div>
 </template>

@@ -1,37 +1,37 @@
 <template lang="html">
-    <div v-bind:class="['ui', { 'disabled' : disabled }, { 'fitted' : fitted },
+    <div :class="['ui', { 'disabled' : disabled }, { 'fitted' : fitted },
         { 'read-only' : readonly }, { 'checked' : isChecked() },
         { 'disabled' : disabled }, typeClass, 'checkbox', { 'focus' : focus },
         { 'error' : error }]">
         <input
-            v-bind:id="id"
-            v-bind:accept="accept"
-            v-bind:alt="alt"
-            v-bind:autocomplete="autocomplete"
-            v-bind:autofocus="autofocus"
-            v-bind:checked="isChecked()"
-            v-bind:dirname="dirname"
-            v-bind:disabled="disabled"
-            v-bind:form="form"
-            v-bind:formaction="formaction"
-            v-bind:formenctype="formenctype"
-            v-bind:formmethod="formmethod"
-            v-bind:formnovalidate="formnovalidate"
-            v-bind:formtarget="formtarget"
-            v-bind:list="list"
-            v-bind:max="max"
-            v-bind:maxlength="maxlength"
-            v-bind:min="min"
-            v-bind:multiple="multiple"
-            v-bind:name="name"
-            v-bind:pattern="pattern"
-            v-bind:placeholder="placeholder"
-            v-bind:readonly="readonly"
-            v-bind:required="required"
-            v-bind:src="src"
-            v-bind:step="step"
-            v-bind:type="inputType"
-            v-bind:value="inputValue"
+            :id="id"
+            :accept="accept"
+            :alt="alt"
+            :autocomplete="autocomplete"
+            :autofocus="autofocus"
+            :checked="isChecked()"
+            :dirname="dirname"
+            :disabled="disabled"
+            :form="form"
+            :formaction="formaction"
+            :formenctype="formenctype"
+            :formmethod="formmethod"
+            :formnovalidate="formnovalidate"
+            :formtarget="formtarget"
+            :list="list"
+            :max="max"
+            :maxlength="maxlength"
+            :min="min"
+            :multiple="multiple"
+            :name="name"
+            :pattern="pattern"
+            :placeholder="placeholder"
+            :readonly="readonly"
+            :required="required"
+            :src="src"
+            :step="step"
+            :type="inputType"
+            :value="inputValue"
             v-on:keydown="emitKeyDown"
             v-on:keypress="emitKeyPress"
             v-on:keyup="emitKeyUp"
@@ -58,7 +58,7 @@
             v-on:select="emitSelect"
             v-on:submit="emitSubmit"
             ref="input" />
-            <label v-bind:for="id">
+            <label :for="id">
                 <slot>{{ label }}</slot>
             </label>
     </div>
