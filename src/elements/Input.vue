@@ -68,7 +68,7 @@
 
 <script>
 import Constants from '../mixins/commons/constants.js'
-import Input from '../mixins/commons/input/'
+import Input from '../mixins/commons/input/index'
 import RandomProp from '../mixins/commons/props/random.js'
 import Loading from '../mixins/commons/states/loading.js'
 import Error from '../mixins/commons/states/error.js'

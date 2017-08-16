@@ -66,7 +66,7 @@
 
 <script>
     import Constants from '../mixins/commons/constants.js'
-    import Input from '../mixins/commons/input/'
+    import Input from '../mixins/commons/input/index'
     import RandomProp from '../mixins/commons/props/random.js'
     import Focus from '../mixins/commons/states/focus.js'
     import Error from '../mixins/commons/states/error.js'
@@ -128,7 +128,7 @@
         },
         computed: {
             typeClass() {
-                return this.type != Constants.checkbox ? this.type : false
+                return thiindexs.type != Constants.checkbox ? this.type : false
             },
             inputValue() {
                 var attrs = this.$vnode.data.attrs
@@ -185,7 +185,7 @@
                         if (this.trueVal && input.checked) {
                             this.$emit('input', this.trueVal);
                         }
-                        
+
                         if (this.falseVal && !input.checked) {
                             this.$emit('input', this.falseVal);
                         }

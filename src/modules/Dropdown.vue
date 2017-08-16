@@ -64,8 +64,8 @@
 
 <script>
     import Constants from '../mixins/commons/constants.js'
-    import ClickOutside from '../mixins/commons/click-outside/'
-    import Input from '../mixins/commons/input/'
+    import ClickOutside from '../mixins/commons/click-outside/index'
+    import Input from '../mixins/commons/input/index'
     import Arrai from '../mixins/commons/arrai.js'
 
     export default {
@@ -303,7 +303,7 @@ Ignoring item: `, item)
                     menu.style.display = 'block'
 
                     this.isUpward = (menu.offsetHeight + bottom > windowHeight)
-                    
+
                     menu.removeAttribute('style')
                 }
             },
