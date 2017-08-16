@@ -52,7 +52,9 @@
                                 v-bind:tabindex="(index + 2) * -1"
                                 v-on:focus="setSelected(item)"
                                 v-for="(item, index) in $items">
-                                {{ item.name ? item.name : item.value }}
+                                <slot name="item" :item="item">
+                                    {{ item.name ? item.name : item.value }}
+                                </slot>
                             </div>
                         </template>
                         <div class="message" v-show="$items.length < 1" v-html="messages.noResults"></div>
