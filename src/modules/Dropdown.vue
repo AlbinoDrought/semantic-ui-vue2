@@ -8,20 +8,20 @@
             {selection},
             { 'upward' : isUpward },
             'dropdown'
-        ]" v-on:click.self="toggle"
-        v-on:keydown.up="search ? false : selectPrevious()"
-        v-on:keydown.down="search ? false : selectNext()"
+        ]" @click.self="toggle"
+        @keydown.up="search ? false : selectPrevious()"
+        @keydown.down="search ? false : selectNext()"
         :tabindex="search ? '' : 0"
         v-click-outside="hide">
         <input type="hidden" :name="name" v-if="selection">
-        <i class="dropdown icon" v-on:click="toggle"></i>
+        <i class="dropdown icon" @click="toggle"></i>
         <input type="search" class="search" autocomplete="off" tabindex="0"
             ref="search"
             v-model="term"
-            v-on:focus="show"
-            v-on:blur="hide"
-            v-on:keydown.up="selectPrevious"
-            v-on:keydown.down="selectNext"
+            @focus="show"
+            @blur="hide"
+            @keydown.up="selectPrevious"
+            @keydown.down="selectNext"
             v-if="search">
         <div :class="[
             { 'default' : typeof selected.value == 'undefined' },
@@ -29,12 +29,12 @@
             { filtered },
         ]">{{ selected.text || selected.value || placeholder || text }}</div>
             <transition
-                v-on:before-enter="beforeEnter"
-                v-on:after-enter="afterEnter"
+                @before-enter="beforeEnter"
+                @after-enter="afterEnter"
                 :enter-active-class="enterActiveClass"
                 :leave-active-class="leaveActiveClass"
-                v-on:before-leave="beforeLeave"
-                v-on:after-leave="afterLeave">
+                @before-leave="beforeLeave"
+                @after-leave="afterLeave">
                 <div
                     ref="menu"
                     :class="[{visible}, 'transition', 'menu']"
@@ -50,7 +50,7 @@
                                     'item'
                                 ]"
                                 :tabindex="(index + 2) * -1"
-                                v-on:focus="setSelected(item)"
+                                @focus="setSelected(item)"
                                 v-for="(item, index) in $items">
                                 <slot name="item" :item="item">
                                     {{ item.name ? item.name : item.value }}
