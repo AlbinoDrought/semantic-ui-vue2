@@ -1,6 +1,6 @@
 {
   "name": "semantic-ui-vue2-albinodrought",
-  "version": "2.5.5",
+  "version": "2.5.6",
   "description": "Semantic UI Integration for Vue 2 - AlbinoDrought fork",
   "main": "index.js",
   "hsnext:main": "index.es.js",
