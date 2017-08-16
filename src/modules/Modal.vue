@@ -1,30 +1,30 @@
 <template lang="html">
         <transition
-            v-on:before-enter="dimmer.animating = true"
+            @before-enter="dimmer.animating = true"
             :enter-active-class="animation.active.enter.dimmer"
-            v-on:after-enter="dimmer.animating = false"
-            v-on:before-leave="dimmer.animating = true"
+            @after-enter="dimmer.animating = false"
+            @before-leave="dimmer.animating = true"
             :leave-active-class="animation.active.leave.dimmer"
-            v-on:after-leave="dimmer.animating = false">
+            @after-leave="dimmer.animating = false">
             <div
                 :class="classes.dimmer"
                 key="2"
                 v-show="dimmer.visible"
-                v-on:click.self="closable ? hide() : false"
+                @click.self="closable ? hide() : false"
                 :style="style">
                 <transition
-                    v-on:before-enter="modal.animating = true"
+                    @before-enter="modal.animating = true"
                     :enter-active-class="animation.active.enter.modal"
-                    v-on:after-enter="modal.animating = false"
-                    v-on:before-leave="modal.animating = true"
+                    @after-enter="modal.animating = false"
+                    @before-leave="modal.animating = true"
                     :leave-active-class="animation.active.leave.modal"
-                    v-on:after-leave="modal.animating = false">
+                    @after-leave="modal.animating = false">
                     <div
                         :class="classes.modal"
                         v-show="modal.visible"
                         :style="style">
                         <i :class="[{ 'grey' : inverted }, 'close', 'icon']"
-                            v-if="closable" v-on:click="hide"></i>
+                            v-if="closable" @click="hide"></i>
                         <div class="header" v-if="header || $slots.header">
                             <slot name="header">{{ header }}</slot>
                         </div>
