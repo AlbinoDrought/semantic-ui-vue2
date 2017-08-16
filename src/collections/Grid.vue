@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-bind:class="['ui', getFloatClasses(), getAlignClasses(), getEqualWidthClasses(), getColumnClasses(), { 'centered' : centered }, 'grid', { 'container' : container }]">
+  <div :class="['ui', getFloatClasses(), getAlignClasses(), getEqualWidthClasses(), getColumnClasses(), { 'centered' : centered }, 'grid', { 'container' : container }]">
     <slot></slot>
   </div>
 </template>

@@ -1,35 +1,35 @@
 <template lang="html">
         <transition
             v-on:before-enter="dimmer.animating = true"
-            v-bind:enter-active-class="animation.active.enter.dimmer"
+            :enter-active-class="animation.active.enter.dimmer"
             v-on:after-enter="dimmer.animating = false"
             v-on:before-leave="dimmer.animating = true"
-            v-bind:leave-active-class="animation.active.leave.dimmer"
+            :leave-active-class="animation.active.leave.dimmer"
             v-on:after-leave="dimmer.animating = false">
             <div
-                v-bind:class="classes.dimmer"
+                :class="classes.dimmer"
                 key="2"
                 v-show="dimmer.visible"
                 v-on:click.self="closable ? hide() : false"
-                v-bind:style="style">
+                :style="style">
                 <transition
                     v-on:before-enter="modal.animating = true"
-                    v-bind:enter-active-class="animation.active.enter.modal"
+                    :enter-active-class="animation.active.enter.modal"
                     v-on:after-enter="modal.animating = false"
                     v-on:before-leave="modal.animating = true"
-                    v-bind:leave-active-class="animation.active.leave.modal"
+                    :leave-active-class="animation.active.leave.modal"
                     v-on:after-leave="modal.animating = false">
                     <div
-                        v-bind:class="classes.modal"
+                        :class="classes.modal"
                         v-show="modal.visible"
-                        v-bind:style="style">
-                        <i v-bind:class="[{ 'grey' : inverted }, 'close', 'icon']"
+                        :style="style">
+                        <i :class="[{ 'grey' : inverted }, 'close', 'icon']"
                             v-if="closable" v-on:click="hide"></i>
                         <div class="header" v-if="header || $slots.header">
                             <slot name="header">{{ header }}</slot>
                         </div>
                         <div class="image content" v-if="image || $slots.image">
-                            <img class="image" v-bind:src="image" v-if="!$slots.image">
+                            <img class="image" :src="image" v-if="!$slots.image">
                             <div class="description"><slot></slot></div>
                         </div>
                         <div class="content" v-else><slot></slot></div>
