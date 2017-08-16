@@ -1,7 +1,7 @@
 {
-  "name": "semantic-ui-vue2",
-  "version": "2.4.2",
-  "description": "Semantic UI Integration for Vue 2",
+  "name": "semantic-ui-vue2-albinodrought",
+  "version": "2.5.3",
+  "description": "Semantic UI Integration for Vue 2 - AlbinoDrought fork",
   "main": "index.js",
   "hsnext:main": "index.es.js",
   "private": true,
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/almino/semantic-ui-vue2.git"
+    "url": "git+https://github.com/albinodrought/semantic-ui-vue2.git"
   },
   "keywords": [
     "vue",
@@ -34,11 +34,14 @@
     "semantic-ui"
   ],
   "author": "Almino Melo <almino.melo@gmail.com>",
+  "contributors": [
+    "AlbinoDrought <albinodrought@gmail.com> (https://github.com/albinodrought)"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/almino/semantic-ui-vue2/issues"
+    "url": "https://github.com/albinodrought/semantic-ui-vue2/issues"
   },
-  "homepage": "https://github.com/almino/semantic-ui-vue2#readme",
+  "homepage": "https://github.com/albinodrought/semantic-ui-vue2#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0"
   },

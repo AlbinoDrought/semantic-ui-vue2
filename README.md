@@ -5,7 +5,7 @@ Components and mixins to use with Vue 2
 ## Installation
 
 ```bash
-$ npm install semantic-ui-vue2
+$ npm install semantic-ui-vue2-albinodrought
 ```
 
 Include Semantic UI's CSS in your HTML. See [official docs](http://semantic-ui.com/introduction/getting-started.html#include-in-your-html).
