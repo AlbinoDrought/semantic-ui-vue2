@@ -128,7 +128,7 @@
         },
         computed: {
             typeClass() {
-                return thiindexs.type != Constants.checkbox ? this.type : false
+                return this.type != Constants.checkbox ? this.type : false
             },
             inputValue() {
                 var attrs = this.$vnode.data.attrs
